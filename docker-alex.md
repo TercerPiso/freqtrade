@@ -1,0 +1,1 @@
+docker build -t alexander171294/freqtrade .

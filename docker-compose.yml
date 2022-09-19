@@ -2,7 +2,7 @@
 version: '3'
 services:
   freqtrade:
-    image: freqtradeorg/freqtrade:stable
+    image: alexander171294/freqtrade
     # image: freqtradeorg/freqtrade:develop
     # Use plotting image
     # image: freqtradeorg/freqtrade:develop_plot
