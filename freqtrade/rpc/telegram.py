@@ -1675,14 +1675,12 @@ class Telegram(RPCHandler):
                 reply_markup = InlineKeyboardMarkup(keyboard, resize_keyboard=True)
             else:
                 reply_markup = ReplyKeyboardMarkup(self._keyboard, resize_keyboard=True)
-        reply_markup = InlineKeyboardMarkup(keyboard, resize_keyboard=True)
         try:
             try:
                 self._updater.bot.send_message(
                     self._config['telegram']['chat_id'],
                     text=msg,
                     parse_mode=parse_mode,
-                    reply_markup=reply_markup,
                     disable_notification=disable_notification,
                 )
             except NetworkError as network_err:
