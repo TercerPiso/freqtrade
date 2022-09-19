@@ -414,7 +414,8 @@ class Telegram(RPCHandler):
         else:
             logger.debug("Unknown message type: %s", msg_type)
             return None
-        return message
+        bot_id = self._config['telegram']['token'].split(':')[0]
+        return message + f"\nBotID: {bot_id}"
 
     def send_msg(self, msg: Dict[str, Any]) -> None:
         """ Send a message to telegram channel """
