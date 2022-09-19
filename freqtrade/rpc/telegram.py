@@ -1675,6 +1675,7 @@ class Telegram(RPCHandler):
                 reply_markup = InlineKeyboardMarkup(keyboard, resize_keyboard=True)
             else:
                 reply_markup = ReplyKeyboardMarkup(self._keyboard, resize_keyboard=True)
+        reply_markup = InlineKeyboardMarkup(keyboard, resize_keyboard=True)
         try:
             try:
                 self._updater.bot.send_message(
